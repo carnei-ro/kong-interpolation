@@ -1,0 +1,3 @@
+services:
+- name: httpbin
+  url: http://httpbin.org/anything/multiple-files/${MY_SECRET_VAR}/wow

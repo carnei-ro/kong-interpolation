@@ -1,0 +1,11 @@
+---
+_format_version: '1.1'
+services:
+- name: httpbin
+  url: http://httpbin.org/anything/secret/${MY_SECRET_VAR}/it-works
+
+routes:
+- name: httpbin
+  service: httpbin
+  paths:
+  - "/"
