@@ -6,7 +6,7 @@ if [ "x${DECLARATIVES_DIR}" != "x" ]; then
 fi
 if [ ! -f ${KONG_DECLARATIVE_CONFIG} ]; then
   kong config init
-  mv kong.yml /etc/kong/kong.yaml
+  mv kong.yml ${KONG_DECLARATIVE_CONFIG}
 else 
   envsubst < ${KONG_DECLARATIVE_CONFIG} > /tmp/interpolated.yaml
   export KONG_DECLARATIVE_CONFIG=/tmp/interpolated.yaml
